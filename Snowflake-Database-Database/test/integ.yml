@@ -1,0 +1,5 @@
+Resources:
+  TestFastlyDictionary:
+    Type: Snowflake::Database::Database
+    Properties:
+      Name: <SNOWFLAKE_DATABASE_NAME>

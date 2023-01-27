@@ -1,12 +1,6 @@
 {
-    "TPSCode": "...",
-    "Title": "...",
-    "CoverSheetIncluded": "...",
-    "DueDate": "...",
-    "ApprovalDate": "...",
-    "Memo": "...",
-    "SecondCopyOfMemo": "...",
-    "TestCode": "...",
-    "Authors": "...",
-    "Tags": "..."
+    "Name": "DoesNotExists",
+    "DataRetentionTimeInDays": <SNOWFLAKE_DATA_RETENTION_TIME_IN_DAYS>,
+    "MaxDataExtensionTimeInDays": <SNOWFLAKE_MAX_DATA_EXTENSION_TIME_IN_DAYS>,
+    "DefaultDdlCollation": "<SNOWFLAKE_DEFAULT_DDL_COLLATION>"
 }
