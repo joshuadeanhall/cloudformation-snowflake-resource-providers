@@ -76,6 +76,7 @@ The Snowflake CloudFormation resources are available on the CloudFormation Publi
 | eu-west-3       | Europe (Paris)            |
 | eu-north-1      | Europe (Stockholm)        |
 | sa-east-1       | South America (São Paulo) |
+| sa-east-1       | South America (São Paulo) |
 
 **Note**: To privately register a resource in any other region, use the provided packages.
 
