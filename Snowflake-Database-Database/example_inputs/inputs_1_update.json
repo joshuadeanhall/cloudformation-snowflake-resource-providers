@@ -1,12 +1,6 @@
 {
-    "TPSCode": "...",
-    "Title": "...",
-    "CoverSheetIncluded": "...",
-    "DueDate": "...",
-    "ApprovalDate": "...",
-    "Memo": "...",
-    "SecondCopyOfMemo": "...",
-    "TestCode": "...",
-    "Authors": "...",
-    "Tags": "..."
+    "Name": "ExampleName",
+    "DataRetentionTimeInDays": 90,
+    "MaxDataExtensionTimeInDays": 10,
+    "DefaultDdlCollation": "en-ci"
 }
