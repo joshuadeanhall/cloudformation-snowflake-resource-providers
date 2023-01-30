@@ -1,5 +1,5 @@
 {
-    "Name": "<SNOWFLAKE_DATABASE_NAME>",
+    "Name": "ExampleName",
     "DataRetentionTimeInDays": 90,
     "MaxDataExtensionTimeInDays": 10,
     "DefaultDdlCollation": "en-ci"
