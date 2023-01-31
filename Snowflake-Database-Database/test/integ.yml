@@ -2,4 +2,7 @@ Resources:
   TestFastlyDictionary:
     Type: Snowflake::Database::Database
     Properties:
-      Name: <SNOWFLAKE_DATABASE_NAME>
+      Name: "TESTSNOWFLAKEDB"
+      DataRetentionTimeInDays: 90,
+      MaxDataExtensionTimeInDays: 10,
+      DefaultDdlCollation: "en-ci"
