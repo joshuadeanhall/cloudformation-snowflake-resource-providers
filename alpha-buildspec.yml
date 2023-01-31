@@ -32,6 +32,7 @@ phases:
       - if test -e ./test/setup.yml; then aws cloudformation create-stack --stack-name $SETUP_STACK_NAME --template-body file://test/setup.yml; fi
       - if test -e ./test/setup.yml; then aws cloudformation wait stack-create-complete --stack-name $SETUP_STACK_NAME; fi
       - npm install && npm run build
+      - python ../get_type_configuration.py
       - cfn submit --dry-run
       - nohup sam local start-lambda --log-file sam_output.log &>/dev/null &
       - sleep 10
