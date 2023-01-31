@@ -9,7 +9,7 @@ from botocore.exceptions import ClientError
 def get_secret():
     "Get the secret from secrets manager"
 
-    secret_name = "cep-snowflake-type-configuration"
+    secret_name = "snowflake-type-configuration"
     region_name = "us-east-1"
     session = boto3.session.Session()
     client = session.client(
