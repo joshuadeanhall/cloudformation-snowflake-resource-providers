@@ -6,30 +6,23 @@ phases:
       python: 3.7
     commands:
       - echo Entered the install phase...
-      - echo About to build $RESOURCE_PATH
+      - echo About to build $MODULE_PATH
       - export PATH="/usr/local/bin:$PATH"
-      - /usr/local/bin/dockerd-entrypoint.sh
-      - cat /var/log/docker.log
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-      - export NVM_DIR="$HOME/.nvm"
-      - echo "Loading nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install 14 && nvm install-latest-npm
-      - npm --version
-      - node --version
-      - pwd
-      - ls
+      - pip install git+https://github.com/aws-cloudformation/cloudformation-cli.git@master
+      - pip install git+https://github.com/aws-cloudformation/cloudformation-cli-python-plugin.git@master
+      - cd $MODULE_PATH
+      - which python
+      - python --version
+      - ls /usr/local/bin
+      - pip freeze
+      - cfn --version
+      - echo $PATH
 
   build:
     commands:
       - echo Entered the build phase...
-      - npm install && npm run build
-      - cp resource-role-prod.yaml $RESOURCE_PATH
-      - cd $RESOURCE_PATH
-      - pwd
-      - ls
-      - npm install && npm run build
-      - if test -x ./setup.sh; then ./setup.sh; fi
-      - ../deregister-all.sh us-east-1
-      - ../publish.sh us-east-1
+      - ls -l ../../release
+      - ../../release/publish-resource-regions.sh
     finally:
       - cat rpdk.log
-      - if test -x ./cleanup.sh; then ./cleanup.sh; fi
+      - ./cleanup.sh
