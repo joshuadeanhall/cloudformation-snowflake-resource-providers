@@ -21,8 +21,6 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - pwd
-      - ls -l
       - npm install && npm run build
       - cd $RESOURCE_PATH
       - pwd
@@ -30,3 +28,4 @@ phases:
       - ../publish-resource-regions.sh
     finally:
       - cat rpdk.log
+      - ./cleanup.sh
