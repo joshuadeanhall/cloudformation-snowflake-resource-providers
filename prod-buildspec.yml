@@ -27,7 +27,6 @@ phases:
       - cd $RESOURCE_PATH
       - pwd
       - ls -l
-      - npm install && npm run build
       - ../publish-resource-regions.sh
     finally:
       - cat rpdk.log
