@@ -23,6 +23,7 @@ phases:
       - echo Entered the build phase...
       - pwd
       - ls -l
+      - npm install && npm run build
       - cd $RESOURCE_PATH
       - pwd
       - ls -l
