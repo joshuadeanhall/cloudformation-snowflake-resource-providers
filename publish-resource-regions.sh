@@ -46,8 +46,8 @@ do
     echo "About to start publishing to $region"
 
     ls -al
-    ./deregister-all.sh $region RESOURCE
-    ./publish-resource.sh $region
+    ../deregister-all.sh $region RESOURCE
+    ../publish-resource.sh $region
 
     if [ "$?" -eq 0 ]
     then
