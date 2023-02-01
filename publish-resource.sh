@@ -139,7 +139,8 @@ echo "About to set-type-default-version"
 aws --no-cli-pager cloudformation --region $AWS_REGION set-type-default-version --type RESOURCE --type-name $TYPE_NAME --version-id $VERSION_ID
 echo ""
 
-# Set the type configuration
+# Set the type configuration DELETE THE LS BEFORE MERGING
+ls -al
 if [ -f "get_type_configuration.py" ]
 then
     echo "About to set type configuration"
