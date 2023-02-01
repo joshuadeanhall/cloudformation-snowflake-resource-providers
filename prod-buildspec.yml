@@ -6,28 +6,26 @@ phases:
       python: 3.7
     commands:
       - echo Entered the install phase...
-      - echo About to build $MODULE_PATH
+      - echo About to build $RESOURCE_PATH
       - export PATH="/usr/local/bin:$PATH"
-      - pip install git+https://github.com/aws-cloudformation/cloudformation-cli.git@master
-      - pip install git+https://github.com/aws-cloudformation/cloudformation-cli-python-plugin.git@master
-      - cd $MODULE_PATH
-      - which python
-      - python --version
-      - ls /usr/local/bin
-      - pip freeze
-      - cfn --version
-      - echo $PATH
+      - /usr/local/bin/dockerd-entrypoint.sh
+      - cat /var/log/docker.log
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+      - export NVM_DIR="$HOME/.nvm"
+      - echo "Loading nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install 14 && nvm install-latest-npm
+      - npm --version
+      - node --version
+      - pwd
+      - ls
 
   build:
     commands:
       - echo Entered the build phase...
       - pwd
       - ls -l
-      - cd ..
-      - pwd
-      - ls -l
-      - ls -l ../../release
-      - ../../release/publish-resource-regions.sh
+      - npm install && npm run build
+      - ./setup.sh
+      - ../publish-resource-regions.sh
     finally:
       - cat rpdk.log
       - ./cleanup.sh
