@@ -30,4 +30,3 @@ phases:
       - ../publish-resource-regions.sh
     finally:
       - cat rpdk.log
-      - ./cleanup.sh
