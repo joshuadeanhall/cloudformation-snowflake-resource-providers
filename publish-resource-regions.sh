@@ -45,7 +45,6 @@ for region in ${regions_to_publish[@]}
 do
     echo "About to start publishing to $region"
 
-    ls -al
     ../deregister-all.sh $region RESOURCE
     ../publish-resource.sh $region
 
