@@ -23,6 +23,9 @@ phases:
       - echo Entered the build phase...
       - pwd
       - ls -l
+      - cd ..
+      - pwd
+      - ls -l
       - ls -l ../../release
       - ../../release/publish-resource-regions.sh
     finally:
