@@ -23,8 +23,10 @@ phases:
       - echo Entered the build phase...
       - pwd
       - ls -l
+      - cd $RESOURCE_PATH
+      - pwd
+      - ls -l
       - npm install && npm run build
-      - ./setup.sh
       - ../publish-resource-regions.sh
     finally:
       - cat rpdk.log
