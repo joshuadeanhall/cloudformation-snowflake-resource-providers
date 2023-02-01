@@ -141,10 +141,11 @@ echo ""
 
 # Set the type configuration DELETE THE LS BEFORE MERGING
 ls -al
-if [ -f "get_type_configuration.py" ]
+ls .. -al
+if [ -f "../get_type_configuration.py" ]
 then
     echo "About to set type configuration"
-    TYPE_CONFIG_PATH=$(python get_type_configuration.py)
+    TYPE_CONFIG_PATH=$(python ../get_type_configuration.py)
     echo "TYPE_CONFIG_PATH is $TYPE_CONFIG_PATH"
     aws --no-cli-pager cloudformation set-type-configuration --type RESOURCE --type-name $TYPE_NAME --configuration-alias default --configuration $(cat ${TYPE_CONFIG_PATH} | jq -c "")
 else
