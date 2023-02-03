@@ -2,6 +2,9 @@
 #
 # This script runs in the buildspec before testing
 
+echo DATABASE_NAME
+echo $DATABASE_NAME
+echo "Doing SED"
 sed -i "s/DATABASE_NAME/${DATABASE_NAME}/g" inputs/inputs_1_create.json 
 sed -i "s/ROLE_NAME/${ROLE_NAME}/g" inputs/inputs_1_create.json
 sed -i "s/DATABASE_NAME/${DATABASE_NAME}/g" inputs/inputs_1_update.json 
