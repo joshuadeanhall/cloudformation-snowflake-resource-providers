@@ -1,6 +1,6 @@
 Resources:
-  TestSnowflakeDatabaseDatabase:
-    Type: Snowflake::Database::Database
+  TestSnowflakeUserUser:
+    Type: Snowflake::User::User
     Properties:
       Name: "SAMCREATEDUSER"
       Password: "HunTer2!TEst"
