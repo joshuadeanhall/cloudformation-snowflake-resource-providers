@@ -1,3 +1,4 @@
+Resources:
   TestSnowflakeDatabaseGrant:
     Type: Snowflake::Database::Grant
     Properties:
