@@ -1,0 +1,6 @@
+  TestSnowflakeDatabaseGrant:
+    Type: Snowflake::Database::Grant
+    Properties:
+      WarehouseName: "WAREHOUSE_NAME"
+      Privilege: "USAGE"
+      Role: "ROLE_NAME"
