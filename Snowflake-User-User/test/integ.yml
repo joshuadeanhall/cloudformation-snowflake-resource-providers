@@ -3,7 +3,7 @@ Resources:
     Type: Snowflake::Database::Database
     Properties:
       Name: "SAMCREATEDUSER"
-      Password: "hunter2"
+      Password: "HunTer2!TEst"
       LoginName: "SAMLOGINNAME"
       DisplayName: "SAM DISPLAY NAME"
       FirstName: "SAM First Name"
