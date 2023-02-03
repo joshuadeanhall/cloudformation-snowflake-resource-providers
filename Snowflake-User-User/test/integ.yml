@@ -20,6 +20,3 @@ Resources:
       RsaPublicKey: ""
       RsaPublicKey2: ""
       Comment: "SAM Comment"
-      DataRetentionTimeInDays: 90
-      MaxDataExtensionTimeInDays: 10
-      DefaultDdlCollation: "en-ci"
