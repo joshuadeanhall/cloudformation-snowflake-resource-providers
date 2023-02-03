@@ -25,6 +25,8 @@ phases:
       - cd $RESOURCE_PATH
       - TYPE_NAME=$(cat .rpdk-config | jq -r .typeName)
       - echo "TYPE_NAME is $TYPE_NAME"
+      - ls -al inputs/
+      - cat inputs/inputs_1_create.json
       - ./setup.sh
       - cat inputs/inputs_1_create.json
       - cfn validate
