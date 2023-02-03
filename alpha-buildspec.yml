@@ -25,10 +25,7 @@ phases:
       - cd $RESOURCE_PATH
       - TYPE_NAME=$(cat .rpdk-config | jq -r .typeName)
       - echo "TYPE_NAME is $TYPE_NAME"
-      - ls -al inputs/
-      - cat inputs/inputs_1_create.json
-      - ./setup.sh
-      - cat inputs/inputs_1_create.json
+      - if test -x ./setup.sh; then ./setup.sh; fi
       - cfn validate
       - cfn generate
       - if test -e ./test/setup.yml; then SETUP_STACK_NAME="setup-$(echo $RESOURCE_PATH | sed s/_/-/g)"; fi
