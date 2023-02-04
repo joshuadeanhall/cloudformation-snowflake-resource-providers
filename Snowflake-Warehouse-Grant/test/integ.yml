@@ -1,6 +1,6 @@
 Resources:
   TestSnowflakeDatabaseGrant:
-    Type: Snowflake::Database::Grant
+    Type: Snowflake::Warehouse::Grant
     Properties:
       WarehouseName: "WAREHOUSE_NAME"
       Privilege: "USAGE"
